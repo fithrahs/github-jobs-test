@@ -25,7 +25,7 @@ function Home() {
 
   const handleSearch = async () => {
     setIsloading(true);
-    await axios.get(`${process.env.REACT_APP_BASEURL}positions.json?description=${description}&=location=${location}&full_time=${isFullTime}`)
+    await axios.get(`${process.env.REACT_APP_BASEURL}positions.json?description=${description}&location=${location}&full_time=${isFullTime}`)
     .then(res => {
       setData(res.data);
       setCountResult(res.data.length);
