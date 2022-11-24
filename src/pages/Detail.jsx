@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Arrow from '../arrow-left.svg';
+import Header from '../components/Header';
 
 function Detail() {
   const { id } = useParams();
@@ -20,7 +21,8 @@ function Detail() {
 
   return (
     <>
-    <div className="container">
+      <Header />
+      <div className="container">
         <Link to='/' className='btn-back'> <img src={Arrow} alt="" /> back</Link>
         <div className="content">
           <div className="header-content">
@@ -33,12 +35,13 @@ function Detail() {
               <div className="card">
                 <div className="card-header">
                   <h3>{data.company}</h3>
+                  <div className="other-job">1 other job</div>
                 </div>
                 <div className="card-body">
                   <img src={data.company_logo} alt={data.company} />
                 </div>
                 <div className="card-footer">
-                  {data.company_url}
+                  <a href={data.company_url}>{data.company_url}</a>
                 </div>
               </div>
               <div className="card--yellow">

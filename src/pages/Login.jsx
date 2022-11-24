@@ -10,14 +10,18 @@ const Login = () => {
     }
   }
   return (
-    <GoogleOAuthProvider clientId="920465101842-270m9l1jnti1iug3tndst8sgn68e04jo.apps.googleusercontent.com">
-    <GoogleLogin
-      onSuccess={responseGoogle}
-      onFailure={() => {
-        console.log('Login Failed');
-      }}
-    />
-    </GoogleOAuthProvider>
+    <div className='login'>
+      <div className="card-login">
+        <GoogleOAuthProvider clientId="920465101842-270m9l1jnti1iug3tndst8sgn68e04jo.apps.googleusercontent.com">
+          <GoogleLogin
+            onSuccess={responseGoogle}
+            onFailure={() => {
+              console.log('Login Failed');
+            }}
+          />
+        </GoogleOAuthProvider>
+      </div>
+    </div>
   )
 }
 

@@ -89,9 +89,36 @@ body {
   width: 70%;
 }
 
+.content .header-content {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.content .body-content .side-left li {
+  margin-left: 20px;
+}
+
+.content .body-content .side-left p {
+  margin-top: 20px;
+}
+
 .content .body-content .side-right {
   width: 30%;
   padding-left: 15px;
+}
+
+.content .body-content .side-right .card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .body-content .side-right .card .card-header .other-job {
+  background-color: aliceblue;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: rgb(62, 163, 221);
 }
 
 .content .card,
@@ -143,4 +170,46 @@ body {
   color: rgb(62, 163, 221);
   font-weight: 700;
   font-size: 20px;
+}
+
+.btn-search {
+  padding: 10px;
+  background-color: rgb(62, 163, 221);
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-login {
+  width: 300px;
+  border-radius: 25px;
+  height: 100px;
+  box-shadow: 5px 0 8px #888888;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-search {
+  padding: 10px;
+  border: none;
+  width: 250px;
+  margin-top: 5px;
+}
+
+.wrapper-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-checkbox input {
+  margin-right: 10px;
 }
