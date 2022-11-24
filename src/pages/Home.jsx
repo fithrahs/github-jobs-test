@@ -43,7 +43,7 @@ function Home() {
           <FormInput title='Location' placeholder='Filter by city, state, zip code, or country' changeValue={(value) => setLocation(value)} />
           <div className="wrapper">
             <input type="checkbox" id="FullTime" checked={isFullTime} onChange={e => setIsFullTime(!isFullTime)} />
-            <label for="FullTime">Full Time Only</label>
+            <label htmlFor="FullTime">Full Time Only</label>
           </div>
           <button onClick={handleSearch}>Search</button>
         </div>
@@ -53,8 +53,8 @@ function Home() {
             countResult ? <h1 style={{marginBottom: '10px'}}>Showing {countResult} Jobs</h1> : <h1 style={{marginBottom: '10px'}}>Job List</h1>
           }
           {
-            data.map(e => {
-              return e ? <Content data={e} /> : null
+            data.map((e, i) => {
+              return e ? <Content data={e} key={i} /> : null
             })
           }
           {
